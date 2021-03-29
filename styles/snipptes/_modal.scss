@@ -1,0 +1,91 @@
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        bottom: -10px;
+        left: -10px;
+        z-index: -1;
+        background: rgba($black, .9);
+        backdrop-filter: blur(10px);
+    }
+
+    &__content {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        background: $white;
+        border-radius: 22px;
+
+        .content__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        // Body
+        .content__body {
+            margin: 12px 0 0;
+            max-height: 60vh;
+            overflow: scroll;
+
+            > * {
+                width: 100%;
+            }
+
+            .files {
+                display: grid;
+                grid-template-columns: repeat(3, 30%);
+                justify-content: space-between;
+                grid-row-gap: 20px;
+                padding: 14px;
+                background: $greyColorLighter;
+                border-radius: 16px;
+                
+                .file__item {
+                    position: relative;
+
+                    .file__check {
+                        position: absolute;
+                        top: 4px;
+                        left: 4px;
+                        margin: 0;
+                        z-index: 3;
+                    }
+
+                    .item__image {
+                        @include transition(all .25s ease);
+                        width: 100%;
+                        display: block;
+                        border: 2px solid transparent;
+                        border-radius: 12px;
+                        overflow: hidden;
+
+                        img {
+                            display: block;
+                        }
+                    }
+
+                    &.item--active {
+                        .item__image {
+                            // opacity: .4;
+                            border-color: $primaryColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

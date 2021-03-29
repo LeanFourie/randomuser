@@ -1,0 +1,31 @@
+.footer {
+    margin: 60px 0;
+
+    &__text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .text__element {
+            color: $greyColorLight;
+
+            &--action {
+                margin: 0 0 0 6px;
+
+                .link__inner {
+                    .link__label {
+                        color: $greyColorLight;
+                    }
+                }
+
+                &:hover {
+                    .link__inner {
+                        .link__label {
+                            color: $primaryColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

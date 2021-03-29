@@ -18,10 +18,12 @@
                             grid-template-columns: repeat(3, 33.333%);
                             align-items: center;
                             position: sticky;
-                            top: 0;
+                            top: 10px;
                             background: $primaryColorLighter;
                             padding: 12px 14px;
                             border-radius: 8px;
+                            box-shadow: 0 4px 8px rgba($black, .1);
+                            z-index: 9;
 
                             &__element {
                                 color: $primaryColor;
@@ -62,9 +64,6 @@
 
                                 .item__text {
                                     grid-column: span 2;
-                                    display: flex;
-                                    flex-wrap: wrap;
-                                    grid-gap: 10px;
                                 }
 
                                 .item__action {

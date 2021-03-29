@@ -1,0 +1,13 @@
+.header {
+    text-align: center;
+    margin: 100px 0 40px;
+
+    &__text {
+        .text__element {
+            &--paragraph {
+                margin: 14px 0 0;
+                color: $greyColorLight;
+            }
+        }
+    }
+}
