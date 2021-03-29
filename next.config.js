@@ -4,8 +4,13 @@ module.exports = withImages()
 const webpack = require('webpack');
 require('dotenv').config();
 
+const path = require('path')
 
 module.exports = {
+    sassOptions: {
+      includePaths: [path.join(__dirname, 'styles')],
+    },
+
     webpack: (config, options) => {
         const env = Object.keys(process.env).reduce((acc, curr) => {
           acc[`process.env.${curr}`] = JSON.stringify(process.env[curr]);

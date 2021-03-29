@@ -19,7 +19,6 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 Modules include:
 
 - [Framer-Motion](https://github.com/framer/motion) for micro interactions
-- [Locomotive-Scroll](https://github.com/locomotivemtl/locomotive-scroll) for scroll animations
 - [GSAP](https://github.com/greensock/GSAP) for animations
 - [SASS](https://github.com/sass/sass) for styling
 
