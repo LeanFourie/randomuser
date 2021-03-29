@@ -15,11 +15,17 @@ export default class Home extends React.Component {
     static async getInitialProps({ query }) {
         const page = await fetchQuery(`?results=10`)
 
-        const requiredData = {
-            firstName: page.results.name.first,
-            lastName: page.results.name.last,
-            email: page.results.email,
-            cell: page.results.cell
+        const requiredData = []
+
+        for ( let user of page.results ) {
+            let userInfo = {}
+
+            userInfo.firstName = user.name.first,
+            userInfo.lastName = user.name.last,
+            userInfo.email = user.email,
+            userInfo.cell = user.cell
+
+            requiredData.push(userInfo)
         }
 
         return { requiredData, query }
