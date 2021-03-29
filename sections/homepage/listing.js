@@ -36,7 +36,7 @@ export default class HomeUserListing extends React.Component {
                 {/* Header */}
                 <div className="titles">
                     <h6 className="titles__element">
-                        User name
+                        User
                     </h6>
                     <h6 className="titles__element">
                         Actions
@@ -55,16 +55,13 @@ export default class HomeUserListing extends React.Component {
                                 >
                                     <div
                                         className="item__text"
-                                        data-title="User name"
+                                        data-title="User:"
                                     >
                                         <p className="text__element text__element--name">
                                             { user.firstName } { user.lastName }
                                         </p>
                                     </div>
-                                    <div
-                                        className="item__actions"
-                                        data-title="Actions"
-                                    >
+                                    <div className="item__actions">
                                         <Button
                                             label={ `View details` }
                                             classes="actions__element"

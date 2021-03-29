@@ -26,6 +26,10 @@
                             box-shadow: 0 4px 8px rgba($black, .1);
                             z-index: 9;
 
+                            @include media-lt-600 {
+                                display: none;
+                            }
+
                             &__element {
                                 color: $primaryColor;
                                 font-weight: 500;
@@ -52,7 +56,19 @@
                                 margin: 4px 0;
                                 padding: 12px 14px;
 
+                                @include media-lt-600 {
+                                    grid-template-columns: 100%;
+                                    grid-row-gap: 10px;
+                                    border-radius: 18px;
+                                    // box-shadow: 0 8px 16px rgba($black, .1);
+                                    border: 1px solid $greyColorLighter;
+                                }
+
                                 &:not(:last-child) {
+                                    @include media-lt-600 {
+                                        margin-bottom: 14px;
+                                    }
+
                                     &::after {
                                         content: '';
                                         position: absolute;
@@ -60,11 +76,34 @@
                                         right: 0;
                                         left: 0;
                                         border-bottom: 1px solid $greyColorLighter;
+
+                                        @include media-lt-600 {
+                                            display: none;
+                                        }
+                                    }
+                                }
+
+                                .item__text,
+                                .item__action {
+                                    &::before {
+                                        @include media-lt-600 {
+                                            content: attr(data-title);
+                                            display: block;
+                                            margin: 0 0 4px;
+                                            font-weight: 600;
+                                            font-variation-settings: 'wght' 600;
+                                            color: $black;
+                                            font-size: 12px;
+                                        }
                                     }
                                 }
 
                                 .item__text {
                                     grid-column: span 2;
+
+                                    @include media-lt-600 {
+                                        grid-column: span 1;
+                                    }
                                 }
 
                                 .item__action {
@@ -90,10 +129,15 @@
                                             grid-template-columns: 40% 60%;
                                             color: $greyColor;
 
+                                            @include media-lt-600 {
+                                                grid-template-columns: 100%;
+                                                grid-row-gap: 10px;
+                                            }
+
                                             &::before {
                                                 content: attr(data-title);
                                                 font-weight: 600;
-                                                font-variation-settings: 'wght' 500;
+                                                font-variation-settings: 'wght' 600;
                                                 color: $black;
                                             }
 

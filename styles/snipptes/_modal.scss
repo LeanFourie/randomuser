@@ -29,6 +29,10 @@
         background: $white;
         border-radius: 22px;
 
+        @include media-lt-600 {
+            max-width: 88%;
+        }
+
         .content__header {
             display: flex;
             align-items: center;
