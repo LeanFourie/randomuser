@@ -1,0 +1,84 @@
+.layout {
+    &--default {
+        .page {
+            &--home-page {
+                .section {
+                    &--listing {
+                        width: 100%;
+                        max-width: 1100px;
+                        margin: 0 auto;
+                        padding: 0 10%;
+
+                        @include media-lt-750 {
+                            padding: 0 6%;
+                        }
+
+                        .titles {
+                            display: grid;
+                            grid-template-columns: repeat(3, 33.333%);
+                            align-items: center;
+                            position: sticky;
+                            top: 0;
+                            background: $primaryColorLighter;
+                            padding: 12px 14px;
+                            border-radius: 8px;
+
+                            &__element {
+                                color: $primaryColor;
+                                font-weight: 500;
+                                font-variation-settings: 'wght' 500;
+
+                                &:first-child {
+                                    grid-column: span 2;
+                                }
+
+                                &:last-child {
+                                    grid-column: span 1;
+                                }
+                            }
+                        }
+
+                        .list {
+                            &__item {
+                                @include transition(all .26s ease);
+                                display: grid;
+                                grid-template-columns: repeat(3, 33.333%);
+                                align-items: center;
+                                position: relative;
+                                margin: 4px 0;
+                                padding: 12px 14px;
+                                // border-radius: 18px;
+
+                                &:not(:last-child) {
+                                    &::after {
+                                        content: '';
+                                        position: absolute;
+                                        bottom: -2px;
+                                        right: 0;
+                                        left: 0;
+                                        border-bottom: 1px solid $greyColorLighter;
+                                    }
+                                }
+
+                                .item__text {
+                                    grid-column: span 2;
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    grid-gap: 10px;
+                                }
+
+                                .item__action {
+                                    grid-column: span 1;
+                                }
+
+                                &:hover {
+                                    background: rgba($primaryColor, .06);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

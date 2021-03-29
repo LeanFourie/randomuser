@@ -2,22 +2,14 @@ h1 {
     text-rendering: optimizeSpeed;
     margin: 0;
     padding: 0;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 500;
     font-variation-settings: 'wght' 500;
     color: $black;
     line-height: 1.2;
 
-    @include media-lt-1200 {
-        font-size: 4vw;
-    }
-
-    @include media-lt-900 {
-        font-size: 40px;
-    }
-
     @include media-lt-750 {
-        font-size: 30px;
+        font-size: 18px;
     }
 }
 
@@ -25,22 +17,14 @@ h2 {
     text-rendering: optimizeSpeed;
     margin: 0;
     padding: 0;
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 500;
     font-variation-settings: 'wght' 500;
     color: $black;
     line-height: 1.2;
 
-    @include media-lt-1200 {
-        font-size: 3.2vw;
-    }
-
-    @include media-lt-900 {
-        font-size: 30px;
-    }
-
     @include media-lt-750 {
-        font-size: 24px;
+        font-size: 246x;
     }
 }
 
@@ -48,19 +32,11 @@ h3 {
     text-rendering: optimizeSpeed;
     margin: 0;
     padding: 0;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 600;
     font-variation-settings: 'wght' 600;
     color: $black;
     line-height: 1.2;
-
-    @include media-lt-1200 {
-        font-size: 3vw;
-    }
-
-    @include media-lt-900 {
-        font-size: 28px;
-    }
 
     @include media-lt-750 {
         font-size: 22px;
@@ -71,19 +47,11 @@ h4 {
     text-rendering: optimizeSpeed;
     margin: 0;
     padding: 0;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 500;
     font-variation-settings: 'wght' 500;
     color: $black;
     line-height: 1.2;
-
-    @include media-lt-1200 {
-        font-size: 2.6vw;
-    }
-
-    @include media-lt-900 {
-        font-size: 24px;
-    }
 
     @include media-lt-750 {
         font-size: 18px;
@@ -94,19 +62,11 @@ h5 {
     text-rendering: optimizeSpeed;
     margin: 0;
     padding: 0;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500;
     font-variation-settings: 'wght' 500;
     color: $black;
     line-height: 1.2;
-
-    @include media-lt-1200 {
-        font-size: 2.2vw;
-    }
-
-    @include media-lt-900 {
-        font-size: 20px;
-    }
 
     @include media-lt-750 {
         font-size: 16px;
@@ -117,22 +77,14 @@ h6 {
     text-rendering: optimizeSpeed;
     margin: 0;
     padding: 0;
-    font-size: 22px;
+    font-size: 14px;
     font-weight: 400;
     font-variation-settings: 'wght' 400;
     color: $black;
     line-height: 1.2;
 
-    @include media-lt-1200 {
-        font-size: 2.2vw;
-    }
-
-    @include media-lt-900 {
-        font-size: 20px;
-    }
-
     @include media-lt-750 {
-        font-size: 16px;
+        font-size: 12px;
     }
 }
 

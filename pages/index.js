@@ -8,7 +8,7 @@ import { fetchQuery } from './../helpers/fetchData'
 import DefaultTheme from './../layouts/default'
 
 // Sections
-import HomeHero from './../sections/homepage/hero'
+import HomeUserListing from './../sections/homepage/listing'
 
 export default class Home extends React.Component {
     // Fetch Data
@@ -50,11 +50,11 @@ export default class Home extends React.Component {
                 title="User Listing"
                 identifier="Home Page"
             >
-                {/* Hero */}
-                <HomeHero
-                    title="Hello from the hero."
+                {/* Listing */}
+                <HomeUserListing
+                    users={ this.state.pageData }
                 />
-                {/* ./Hero */}
+                {/* Listing */}
             </DefaultTheme>
         )
     }

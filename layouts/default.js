@@ -20,7 +20,7 @@ export default class DefaultTheme extends React.Component {
 	
 	render () {
 		return (
-			<div className="theme theme--default">
+			<div className="layout layout--default">
 				{/* SEO */}
 				<Head>
 					<title>{ this.props.title } </title>
