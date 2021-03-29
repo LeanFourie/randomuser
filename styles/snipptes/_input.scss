@@ -1,0 +1,30 @@
+.input {
+    width: 100%;
+    padding: 10px 20px;
+    background: $white;
+    border: 1px solid $greyColorLighter;
+    border-radius: 12px;
+    line-height: 1.6;
+	color: $black;
+    font-size: 14px;
+    font-weight: 500;
+	font-variation-settings: 'wght' 500;
+    box-shadow: none;
+    outline: none;
+    
+    &::placeholder {
+        opacity: .4;
+        font-variation-settings: 'wght' 400;
+        font-weight: 400;
+        letter-spacing: .6px;
+    }
+
+	@include media-lt-750 {
+        padding: 6px 12px;
+		font-size: 12px;
+    }
+    
+    &--type-password {
+        letter-spacing: 3px;
+    }
+}

@@ -1,0 +1,217 @@
+.button {
+    display: inline-block;
+
+    // Children
+    &__inner {
+        @include transition(all .24s ease);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 16px;
+        background: rgba($primaryColor, .14);
+        border: none;
+        border-radius: 12px;
+        color: $primaryColor;
+        font-size: 14px;
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+
+        *[stroke] {
+            stroke: $primaryColor;
+        }
+    }
+
+    &__label {
+        margin-right: 8px;
+    }
+
+    // Layouts
+    &--icon-left {
+        .button__inner {
+            flex-direction: row-reverse;
+        }
+
+        .button__label {
+            margin-right: 0px;
+            margin-left: 8px;
+        }
+    }
+
+    // Colors
+    &--primary {
+        .button__inner {
+            background: rgba($primaryColor, .14);
+            color: $primaryColor;
+
+            .button__icon {
+                *[stroke] {
+                    stroke: $primaryColor;
+                }
+            }
+        }
+    }
+
+    &--secondary {
+        .button__inner {
+            background: rgba($secondaryColor, .14);
+            color: $secondaryColor;
+
+            .button__icon {
+                *[stroke] {
+                    stroke: $secondaryColor;
+                }
+            }
+        }
+    }
+
+    &--success {
+        .button__inner {
+            background: rgba($successColor, .14);
+            color: $successColor;
+
+            .button__icon {
+                *[stroke] {
+                    stroke: $successColor;
+                }
+            }
+        }
+    }
+
+    &--warning {
+        .button__inner {
+            background: rgba($warningColor, .14);
+            color: $warningColor;
+
+            .button__icon {
+                *[stroke] {
+                    stroke: $warningColor;
+                }
+            }
+        }
+    }
+
+    &--danger {
+        .button__inner {
+            background: rgba($dangerColor, .14);
+            color: $dangerColor;
+
+            .button__icon {
+                *[stroke] {
+                    stroke: $dangerColor;
+                }
+            }
+        }
+    }
+
+    &--white {
+        .button__inner {
+            background: rgba($white, .14);
+            color: $white;
+
+            .button__icon {
+                *[stroke] {
+                    stroke: $white;
+                }
+            }
+        }
+    }
+
+    &--black {
+        .button__inner {
+            background: rgba($black, .14);
+            color: $black;
+
+            .button__icon {
+                *[stroke] {
+                    stroke: $black;
+                }
+            }
+        }
+    }
+
+    &--disabled {
+        pointer-events: none;
+        cursor: not-allowed;
+
+        .button__inner {
+            background: rgba($greyColor, .14);
+            color: $greyColor;
+        }
+    }
+
+    &:hover {
+        // Children
+        .button__inner {
+            background: $primaryColor;
+            color: $white;
+            cursor: pointer;
+
+            .button__icon {
+                *[stroke] {
+                    stroke: $white;
+                }
+            }
+        }
+
+        // Colors
+        &.button--primary {
+            .button__inner {
+                background: $primaryColor;
+                color: $white;
+            }
+        }
+    
+        &.button--secondary {
+            .button__inner {
+                background: $secondaryColor;
+                color: $white;
+            }
+        }
+    
+        &.button--success {
+            .button__inner {
+                background: $successColor;
+                color: $white;
+            }
+        }
+    
+        &.button--warning {
+            .button__inner {
+                background: $warningColor;
+                color: $white;
+            }
+        }
+    
+        &.button--danger {
+            .button__inner {
+                background: $dangerColor;
+                color: $white;
+            }
+        }
+    
+        &.button--white {
+            .button__inner {
+                background: $white;
+                color: $primaryColor;
+            }
+
+            .button__icon {
+                *[stroke] {
+                    stroke: $primaryColor;
+                }
+            }
+        }
+    
+        &.button--black {
+            .button__inner {
+                background: $black;
+                color: $white;
+            }
+        }
+    }
+}

@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    font-family: $font-family;
+
+    &::selection {
+        background: rgba($primaryColor, .1);
+        color: $primaryColor;
+        stroke: $primaryColor;
+    }
+
+    &::-moz-selection {
+        background: rgba($primaryColor, .1);
+        color: $primaryColor;
+        stroke: $primaryColor;
+    }
+}
+
+body {
+    width: 100%;
+    max-width: 100vw;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.page {
+    width: 100%;
+    position: relative;
+}
+
+.image--cover {
+    width: 100%;
+    height: 100%;
+    float: left;
+    object-fit: cover;
+}
+.image--contain {
+    width: 100%;
+    height: 100%;
+    float: left;
+    object-fit: contain;
+}
+
+button,
+a {
+    // @include transition(all .35s ease);
+    width: auto;
+    height: auto;
+    text-decoration: none;
+
+    &:active, &:focus,
+    &:hover, &:visited {
+        box-shadow: none;
+        outline: none;
+        text-decoration: none;
+    }
+}
+
+svg {
+    path, ellipse,
+    circle, rect,
+    text, tspan {
+        @include transition(all .24s ease);
+    }
+}
