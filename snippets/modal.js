@@ -26,9 +26,9 @@ export default class Modal extends React.Component {
                         </h5>
                         <Button
                             icon={{
-                                name: 'cube'
+                                name: 'close'
                             }}
-                            classes={`header__element header__element--action`}
+                            classes={`header__element header__element--action button--danger`}
                             click={ this.props.closeModal }
                             hoverAnimation={{
                                 scale: 1.05

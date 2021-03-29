@@ -13,6 +13,7 @@
                             padding: 0 6%;
                         }
 
+                        // Title
                         .titles {
                             display: grid;
                             grid-template-columns: repeat(3, 33.333%);
@@ -40,6 +41,7 @@
                             }
                         }
 
+                        // List
                         .list {
                             &__item {
                                 @include transition(all .26s ease);
@@ -49,7 +51,6 @@
                                 position: relative;
                                 margin: 4px 0;
                                 padding: 12px 14px;
-                                // border-radius: 18px;
 
                                 &:not(:last-child) {
                                     &::after {
@@ -72,6 +73,36 @@
 
                                 &:hover {
                                     background: rgba($primaryColor, .06);
+                                }
+                            }
+                        }
+
+                        // Modal
+                        .modal {
+                            &__content {
+                                .content__body {
+                                    .details {
+                                        display: grid;
+                                        grid-row-gap: 10px;
+
+                                        &__item {
+                                            display: grid;
+                                            grid-template-columns: 40% 60%;
+                                            color: $greyColor;
+
+                                            &::before {
+                                                content: attr(data-title);
+                                                font-weight: 600;
+                                                font-variation-settings: 'wght' 500;
+                                                color: $black;
+                                            }
+
+                                            &:not(:last-child) {
+                                                padding: 0 0 10px;
+                                                border-bottom: 1px solid $greyColorLighter;
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }

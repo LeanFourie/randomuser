@@ -12,7 +12,7 @@ export default class HomeUserListing extends React.Component {
         this.state = {
             users: this.props.users,
             showModal: false,
-            userFirstname: '',
+            userFirstName: '',
             userLastName: '',
             userEmail: '',
             userCell: ''
@@ -20,9 +20,10 @@ export default class HomeUserListing extends React.Component {
     }
 
     showUserInfoModal = ( ...args ) => {
+        console.log(args[0])
         this.setState(prevState => ({
             showModal: !prevState.showModal,
-            userFirstname: args[0].firstName,
+            userFirstName: args[0].firstName,
             userLastName: args[0].lastName,
             userEmail: args[0].email,
             userCell: args[0].cell
@@ -76,7 +77,7 @@ export default class HomeUserListing extends React.Component {
                                             }}
                                             click={ () => {
                                                 this.showUserInfoModal({
-                                                    firstname: user.firstName,
+                                                    firstName: user.firstName,
                                                     lastName: user.lastName,
                                                     email: user.email,
                                                     cell: user.cell
@@ -97,7 +98,7 @@ export default class HomeUserListing extends React.Component {
                     showModal={ this.state.showModal }
                     closeModal={ () => {
                         this.showUserInfoModal({
-                            firstname: '',
+                            firstName: '',
                             lastName: '',
                             email: '',
                             cell: ''
@@ -105,15 +106,24 @@ export default class HomeUserListing extends React.Component {
                     }}
                 >
                     <div className="details">
-                        <div className="details__item details__item--name">
+                        <h6
+                            className="details__item details__item--name"
+                            data-title="Name & Surname:"
+                        >
                             { this.state.userFirstName } { this.state.userLastName }
-                        </div>
-                        <div className="details__item details__item--email">
+                        </h6>
+                        <h6
+                            className="details__item details__item--email"
+                            data-title="Email:"
+                        >
                             { this.state.userEmail }
-                        </div>
-                        <div className="details__item details__item--cell">
+                        </h6>
+                        <h6
+                            className="details__item details__item--cell"
+                            data-title="Cell:"
+                        >
                             { this.state.userCell }
-                        </div>
+                        </h6>
                     </div>
                 </Modal>
                 {/* ./Modal */}
